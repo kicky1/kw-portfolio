@@ -10,7 +10,7 @@ export function Projects() {
   
     return (
       <LiquidCard title="Projects">
-        <ul className="space-y-4">
+        <ul className="space-y-4 px-6">
           {projects.map((project) => (
             <li key={project.name} className="border-b pb-2 last:border-b-0">
               <h3 className="font-bold">{project.name}</h3>

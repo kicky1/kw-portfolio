@@ -16,7 +16,7 @@ export function Contact() {
             <a 
               key={index} 
               href={contact.href}
-              className="flex justify-between items-center text-muted-foreground hover:text-[#40ce9f] transition-colors"
+              className="flex justify-between items-center text-white hover:text-[#40ce9f] transition-colors"
             >
               <span>{contact.label}</span>
               <contact.icon size={20} />

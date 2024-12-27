@@ -12,8 +12,8 @@ export default function Home() {
     <main className="h-screen w-screen grid grid-cols-[3fr_3fr] bg-background text-foreground overflow-hidden">
       <section className="h-full flex flex-col">
      
-        <Tabs defaultValue="experience" className="flex flex-col p-6 mt-6 ml-6 rounded-xl rounded-bl-none bg-muted">
-          <TabsList className="grid w-full grid-cols-2">
+        <Tabs defaultValue="experience" className="flex flex-col py-6 mt-6 ml-6 rounded-xl rounded-bl-none bg-muted">
+          <TabsList className="grid w-full grid-cols-2 p-0 pb-4 px-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="gallery">Gallery</TabsTrigger>
           </TabsList>
@@ -21,7 +21,7 @@ export default function Home() {
             value="experience"
             className="flex flex-col overflow-y-auto h-full" // This allows scrolling
           >
-            <ScrollArea className="h-[calc(100vh-12rem)] pr-4">
+            <ScrollArea className="h-[calc(100vh-12rem)] px-6">
               <ExperienceTimeline />
             </ScrollArea>
           </TabsContent>

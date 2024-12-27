@@ -17,8 +17,8 @@ export function LiquidCard({ title, children }: { title: string, children: React
           </div>
           <div className="flex-1 flex flex-col p-2 h-10 rounded-bl-none rounded-tl-3xl rounded-tr-3xl w-32 bg-muted"/>
         </div>
-        <Card className="bg-muted relative border-none rounded-tr-none  py-6">
-          <CardContent className="flex flex-col overflow-y-auto h-full">
+        <Card className="bg-muted relative border-none rounded-tr-none  py-6 ">
+          <CardContent className="flex flex-col overflow-y-auto h-full px-0 mx-0">
             <ScrollArea className="h-[calc(100vh-26rem)]">
             {children}
             </ScrollArea>
