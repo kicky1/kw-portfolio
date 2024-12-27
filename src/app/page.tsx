@@ -48,17 +48,19 @@ export default function Home() {
         </div>
       </section>
       <div className="h-full flex flex-col p-6 overflow-hidden">
-        <div className="space-y-3 h-full pb-2">
-          <div className="grid grid-cols-[4fr_2fr] gap-3">
+        <div className="space-y-3 h-full">
+          <div className="grid grid-cols-[4fr_2fr] gap-3 h-60">
             <AboutMe />
             <Contact />
           </div>
-          <ScrollArea className="overflow-auto">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="flex flex-col overflow-y-auto h-full">
               <Skills />
-          </ScrollArea>
-          <ScrollArea className="overflow-auto">
+            </div>
+            <div className="flex flex-col overflow-y-auto h-full">
               <Projects />
-          </ScrollArea>
+            </div>
+          </div>
         </div>
       </div>
     </main>
