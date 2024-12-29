@@ -67,7 +67,7 @@ export function Skills() {
       <LiquidCard title="Skills">
             <ul className="grid grid-cols-3 gap-2 px-6">
             {skills.map((item) => (
-              <div key={crypto.randomUUID()} className="flex flex-col items-center my-2">
+              <div key={crypto.randomUUID()} className="flex flex-col items-center py-4 px-4 rounded-xl">
                 <div className="mb-2" style={{ color: item.color }}>
                   {cloneElement(item.icon, { size: 24 })}
                 </div>
