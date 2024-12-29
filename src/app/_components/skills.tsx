@@ -31,6 +31,8 @@ import {
   Graphql,
 } from "@styled-icons/simple-icons";
 import { cloneElement } from "react";
+import { motion } from "framer-motion";
+import { linearAnimation } from "@/lib/animations";
 
 export function Skills() {
     const skills = [
@@ -68,10 +70,12 @@ export function Skills() {
             <ul className="grid grid-cols-3 gap-2 px-6">
             {skills.map((item) => (
               <div key={crypto.randomUUID()} className="flex flex-col items-center py-4 px-4 rounded-xl">
+                 <motion.div custom={9} variants={linearAnimation}>
                 <div className="mb-2" style={{ color: item.color }}>
                   {cloneElement(item.icon, { size: 24 })}
                 </div>
                 <div className="text-center">{item.name}</div>
+                </motion.div>
               </div>
             ))}
             </ul>

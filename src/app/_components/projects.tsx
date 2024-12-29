@@ -5,8 +5,8 @@ import rickmorty from '../../../public/rickmorty.png'
 import interviewtasks from '../../../public/interviewtasks.png'
 import bingo from '../../../public/bingo.png'
 import placeholder from '../../../public/placeholder.png'
-
-
+import { motion } from "framer-motion"
+import { linearAnimation } from "@/lib/animations"
 
 export function Projects() {
 	const projects = [
@@ -22,7 +22,8 @@ export function Projects() {
       <LiquidCard title="Projects">
         <ul className="space-y-4 px-4">
           {projects.map((project) => (
-            <li key={project.name} className="flex items-center space-x-4 border-b py-4 px-4 mr-2 last:border-b-0 bg-background rounded-xl">
+            <motion.div custom={10} variants={linearAnimation} key={project.name}>
+            <li  className="flex items-center space-x-4 border-b py-4 px-4 mr-2 last:border-b-0 bg-background rounded-xl">
               <Image
                 src={project.image ? project.image : placeholder.src}
                 width={100}
@@ -35,6 +36,7 @@ export function Projects() {
                 <p className="text-muted-foreground">{project.description}</p>
               </div>
             </li>
+            </motion.div>
           ))}
         </ul>
       </LiquidCard>
