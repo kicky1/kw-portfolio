@@ -45,16 +45,17 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`h-screen w-screen overflow-hidden ${GeistSans.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`h-screen w-screen overflow-hidden ${GeistSans.variable}`}
+      suppressHydrationWarning
+    >
       <body className="h-full">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

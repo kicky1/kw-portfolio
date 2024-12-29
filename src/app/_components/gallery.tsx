@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { useState, useCallback } from "react"
-import { AnimatePresence, motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { type Photo } from "@/lib/types"
-import { GALLERY_IMAGES } from "@/lib/constants"
-import { PhotoCard } from "./photo-card"
-import { linearAnimation } from "@/lib/animations"
+import { useState, useCallback } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { type Photo } from "@/lib/types";
+import { GALLERY_IMAGES } from "@/lib/constants";
+import { PhotoCard } from "./photo-card";
+import { linearAnimation } from "@/lib/animations";
 
 function getInitialImages(): Photo[] {
   return GALLERY_IMAGES.map((img, i) => ({
     ...img,
-    rotation: i === 0 ? 0 : Math.random() * 24 - 6
-  }))
+    rotation: i === 0 ? 0 : Math.random() * 24 - 6,
+  }));
 }
 
 export function Gallery() {
@@ -55,8 +55,8 @@ export function Gallery() {
   }, [isAnimating]);
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full">
-      <div className="relative w-full max-w-6xl mx-auto px-8 mt-6">
+    <div className="flex h-full w-full flex-col items-center justify-center">
+      <div className="relative mx-auto mt-6 w-full max-w-6xl px-8">
         <div className="flex items-center justify-between">
           <motion.div custom={1} variants={linearAnimation}>
             <Button
@@ -66,16 +66,16 @@ export function Gallery() {
               size="icon"
               className="rounded-full bg-background/80"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="h-6 w-6" />
             </Button>
           </motion.div>
 
-          <motion.div 
-            custom={0} 
+          <motion.div
+            custom={0}
             variants={linearAnimation}
-            className="relative flex-1 mx-8"
+            className="relative mx-8 flex-1"
           >
-            <div className="relative flex justify-center items-center w-full min-h-[60vh] perspective-300">
+            <div className="perspective-300 relative flex min-h-[60vh] w-full items-center justify-center">
               <AnimatePresence mode="popLayout">
                 {images.map((image, index) => (
                   <PhotoCard
@@ -101,7 +101,7 @@ export function Gallery() {
               size="icon"
               className="rounded-full bg-background/80"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="h-6 w-6" />
             </Button>
           </motion.div>
         </div>
