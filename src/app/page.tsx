@@ -17,32 +17,32 @@ export default function Home() {
     <motion.main
       initial="hidden"
       animate="visible"
-      className="h-screen w-screen grid grid-cols-[3fr_3fr] bg-background text-foreground overflow-hidden"
+      className="h-screen w-screen grid grid-cols-[3fr_3fr] bg-background/10 text-foreground overflow-hidden"
     >
+      
       <section
-       
         className="h-full flex flex-col"
       >
         <Tabs defaultValue="experience" className="flex flex-col py-6 mt-6 ml-6 rounded-xl rounded-bl-none bg-muted">
+       
           <TabsList className="grid w-full grid-cols-2 p-0 pb-4 px-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="gallery">Gallery</TabsTrigger>
           </TabsList>
           <TabsContent
             value="experience"
-            className="flex flex-col overflow-y-auto h-full"
-          >
-            <ScrollArea className="h-[calc(100vh-12rem)] px-6">
+            className="overflow-y-auto h-full"
+          >        
+            <ScrollArea className="h-[calc(100vh-12rem)] px-6  ">
               <ExperienceTimeline />
             </ScrollArea>
           </TabsContent>
-          <TabsContent value="gallery" className="flex-1 flex flex-col overflow-y-auto h-full">
-            <ScrollArea className="h-[calc(100vh-12rem)]">
+          <TabsContent value="gallery" className="overflow-y-auto h-[calc(100vh-12rem)]">
               <Gallery />
-            </ScrollArea>
           </TabsContent>
         </Tabs>
         <div  className="flex mb-12 ml-6">
+    
           <div className="flex-1 flex flex-col p-2 h-10 rounded-tl-0 rounded-tr-0 rounded-bl-xl w-32 rounded-br-3xl bg-muted" />
           <div className="flex bg-muted w-40">
             <div className="flex-1 flex p-2 rounded-tl-3xl bg-background justify-center items-center max-w-40">

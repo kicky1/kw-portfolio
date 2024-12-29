@@ -21,7 +21,7 @@ export function AboutMe() {
               <p className="text-muted-foreground">Software Developer</p>
             </div>
           </div>
-          <p>Passionate about creating innovative web solutions with 5+ years of experience in full-stack development.</p>
+          <p>Passionate about creating innovative web solutions with 7+ years of experience in web development.</p>
         </motion.div>
         </CardContent>
       </Card>

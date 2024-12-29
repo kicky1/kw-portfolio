@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -6,6 +7,11 @@ export default {
     content: ["./src/**/*.tsx"],
   theme: {
   	extend: {
+		screens: {
+			'3xl': '1920px', // or any value you prefer
+			'4xl': '2560px', // or any value you prefer
+			'5xl': '3200px', // or any value you prefer
+		  },
   		fontFamily: {
   			sans: [
   				'var(--font-geist-sans)',
@@ -61,5 +67,7 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+	require("tailwindcss-animate"),
+],
 } satisfies Config;
