@@ -75,10 +75,10 @@ export const ProjectInformation = ({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="flex flex-col md:max-h-[500px] md:flex-row"
+              className="flex flex-col 2xl:max-h-[500px] 2xl:flex-row"
             >
-              <div className="relative md:w-1/2">
-                <div className="relative h-72 md:h-full">
+              <div className="relative hidden md:w-1/2">
+                <div className="relative 2xl:h-full">
                   <Image
                     src={image || "/placeholder.png"}
                     fill
