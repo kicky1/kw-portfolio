@@ -10,11 +10,11 @@ export function AboutMe() {
         <motion.div custom={4} variants={linearAnimation}>
           <div className="mb-4 flex items-center space-x-4">
             <Image
-              src="/portfoliov2.jpg?height=100&width=100"
-              width={100}
-              height={100}
+              src="/portfoliov2.jpg?height=200&width=200"
+              width={200}
+              height={200}
               alt="Avatar"
-              className="h-16 w-16 rounded-full object-cover"
+              className="h-24 w-24 rounded-full object-cover"
             />
             <div>
               <h1 className="text-xl font-bold">Krzysztof Wicki</h1>

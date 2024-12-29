@@ -11,9 +11,14 @@ export function Projects() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   return (
     <LiquidCard title="Projects">
-      <ul className="space-y-4 px-4">
+      <ul className="space-y-4">
         {PROJECT_DATA.map((project, index) => (
-          <motion.div custom={10} variants={linearAnimation} key={project.name}>
+          <motion.div
+            custom={10}
+            variants={linearAnimation}
+            key={project.name}
+            className="px-6"
+          >
             <ProjectInformation
               name={project.name}
               image={project.image}

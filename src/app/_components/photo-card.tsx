@@ -61,6 +61,8 @@ export function PhotoCard({
         boxShadow:
           "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
       }}
+      // Prevent drag behavior on the entire motion div
+      onDragStart={(e) => e.preventDefault()}
     >
       <div className="rounded-xl">
         <Image
@@ -70,6 +72,8 @@ export function PhotoCard({
           height={height}
           className="rounded-md object-cover shadow-lg"
           priority={index === 0}
+          // Prevent drag behavior on the image itself
+          onDragStart={(e) => e.preventDefault()}
         />
       </div>
     </motion.div>

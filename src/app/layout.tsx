@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-screen w-screen overflow-hidden ${GeistSans.variable}`}
+      className={`w-screen 2xl:h-screen 2xl:overflow-hidden ${GeistSans.variable}`}
       suppressHydrationWarning
     >
       <body className="h-full">
