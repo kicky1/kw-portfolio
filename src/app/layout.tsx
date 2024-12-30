@@ -9,15 +9,15 @@ export const metadata: Metadata = {
     default: "krzysztofwicki",
     template: "%s | krzysztofwicki",
   },
-  description: "Software engineer at Sevenet S.A.",
+  description: "Software developer at Sevenet S.A.",
   openGraph: {
     title: "krzysztofwicki",
-    description: "Software engineer at Sevenet S.A.",
-    url: "https://krzysztofwicki.com",
+    description: "Software developer at Sevenet S.A.",
+    url: "https://krzysztofwicki-portfolio.vercel.app/",
     siteName: "krzysztofwicki.com",
     images: [
       {
-        url: "https://krzysztofwicki.com/og.png",
+        url: "https://krzysztofwicki-portfolio.vercel.app/og.png",
         width: 1920,
         height: 1080,
       },
@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     title: "kicky",
     card: "summary_large_image",
+    description: "Software engineer at Sevenet S.A.",
+    images: ["https://krzysztofwicki-portfolio.vercel.app/og.png"],
   },
   icons: {
     shortcut: "/favicon.png",
