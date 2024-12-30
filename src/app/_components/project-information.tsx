@@ -80,7 +80,7 @@ export const ProjectInformation = ({
                   <p className="font-semibold leading-none tracking-tight">
                     {name}
                   </p>
-                  <p className="text-sm text-muted-foreground">{description}</p>
+                  <p className="text-sm text-muted-foreground mt-2">{description}</p>
                 </div>
               </div>
             </div>
