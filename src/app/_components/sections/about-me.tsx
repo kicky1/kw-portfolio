@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { linearAnimation } from "@/lib/animations";
+import { ABOUT_DATA } from "@/lib/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -17,13 +18,12 @@ export const AboutMe = () => {
               className="h-24 w-24 rounded-full object-cover"
             />
             <div>
-              <h1 className="text-xl font-bold">Krzysztof Wicki</h1>
-              <p className="text-muted-foreground">Software Developer</p>
+              <h1 className="text-xl font-bold">{ABOUT_DATA.name}</h1>
+              <p className="text-muted-foreground">{ABOUT_DATA.title}</p>
             </div>
           </div>
           <p>
-            Passionate about creating innovative web solutions with 7+ years of
-            experience in web development.
+            {ABOUT_DATA.description}
           </p>
         </motion.div>
       </CardContent>
