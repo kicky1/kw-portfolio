@@ -4,12 +4,16 @@ import { linearAnimation } from "@/lib/animations";
 import { useState } from "react";
 import { EXPERIENCE_DATA } from "@/lib/constants";
 
-export const  ExperienceTimeline = () => {
+type Props = {
+  isMobile?: boolean
+}
+
+export const  ExperienceTimeline = ({isMobile}: Props) => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   return (
     <div className="space-y-4 2xl:bg-muted">
       {EXPERIENCE_DATA.map((exp, index) => (
-        <motion.div key={index} custom={exp.custom} variants={linearAnimation}>
+        <motion.div key={index} custom={isMobile ? 1 : exp.custom} variants={linearAnimation}>
           <JobInformation
             {...exp}
             isSelected={selectedId === index}

@@ -1,14 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { linearAnimation } from "@/lib/animations";
 import { ABOUT_DATA } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export const AboutMe = () => {
+type Props = {
+  isMobile?: boolean
+}
+export const AboutMe = ({ isMobile }: Props) => {
   return (
-    <Card className="bg-muted">
+    <Card className={cn("bg-muted", isMobile && "bg-background")}>
       <CardContent className="pt-6">
-        <motion.div custom={4} variants={linearAnimation}>
+        <motion.div custom={isMobile ? 0 : 4} variants={linearAnimation}>
           <div className="mb-4 flex items-center space-x-4">
             <Image
               src="/portfoliov2.jpg?height=200&width=200"

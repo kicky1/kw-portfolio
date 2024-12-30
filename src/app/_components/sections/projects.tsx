@@ -7,14 +7,18 @@ import { PROJECT_DATA } from "@/lib/constants";
 import { ProjectInformation } from "../project-information";
 import { useState } from "react";
 
-export const Projects = () => {
+type Props = {
+  isMobile?: boolean
+}
+
+export const Projects = ({isMobile}: Props) => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   return (
     <LiquidCard title="Projects">
       <ul className="space-y-4">
         {PROJECT_DATA.map((project, index) => (
           <motion.div
-            custom={10}
+            custom={isMobile ? 4 : 10}
             variants={linearAnimation}
             key={project.name}
             className={`px-6 ${selectedId === index ? '2xl:fixed inset-0 z-50 p-4 2xl:p-0' : ''}`}

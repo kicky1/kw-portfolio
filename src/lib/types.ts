@@ -6,3 +6,7 @@ export type Photo = {
   width: number;
   height: number;
 }
+
+export type MobileLayoutProps = {
+  className?: string;
+}

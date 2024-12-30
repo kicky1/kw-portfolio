@@ -196,10 +196,10 @@ export const PROJECT_DATA = [
 
 
 export const CONTACT_DATA = [
-  { icon: Github, label: "GitHub", href: "#", custom: 5 },
-  { icon: Linkedin, label: "LinkedIn", href: "#", custom: 6 },
-  { icon: Twitter, label: "Twitter", href: "#", custom: 7 },
-  { icon: Mail, label: "Email", href: "mailto:john@example.com", custom: 8 },
+  { icon: Github, label: "GitHub", href: "https://github.com/kicky1", custom: 5 },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/krzysztof-wicki-ba19571b5/", custom: 6 },
+  { icon: Twitter, label: "Twitter", href: "https://x.com/CartelKicky", custom: 7 },
+  { icon: Mail, label: "Email", href: "mailto:krzysztofwicki.it@gmail.com", custom: 8 },
 ];
 
 
