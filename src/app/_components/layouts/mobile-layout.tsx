@@ -23,13 +23,13 @@ export const MobileLayout = () => {
               <ExperienceTimeline isMobile/>
             </section>
             <section id="mobile-skills" aria-label="Skills">
-              <Skills />
+              <Skills isMobile/>
             </section>
             <section id="mobile-projects" aria-label="Projects">
-              <Projects />
+              <Projects isMobile/>
             </section>
             <section id="mobile-contact" aria-label="Contact">
-              <Contact />
+              <Contact isMobile/>
             </section>
           </div>
         </section>
