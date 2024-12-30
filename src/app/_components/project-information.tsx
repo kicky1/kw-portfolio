@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -34,27 +36,27 @@ export const ProjectInformation = ({
       onClick={onClick}
       className={`${
         isSelected
-          ? "fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4 backdrop-blur-sm"
+          ? "2xl:fixed 2xl:inset-0 z-50 flex items-center justify-center bg-black/60  backdrop-blur-sm  2xl:bg-transparent 2xl:p-0 2xl:backdrop-blur-none"
           : ""
       }`}
     >
       <motion.div
         layout
-        className={`${isSelected ? "w-full max-w-4xl" : "w-full"}`}
+        className={`${isSelected ? "w-full max-w-4xl 2xl:max-w-none" : "w-full"}`}
         transition={{
           layout: { duration: 0.3, ease: "easeInOut" },
         }}
       >
         <div
           className={`group relative overflow-hidden border-2 bg-muted transition-colors duration-300 ease-in-out ${
-            !isSelected && "hover:cursor-pointer hover:border-[#10B981]"
+            !isSelected && "hover:cursor-pointer 2xl:hover:border-[#10B981]"
           } rounded-xl`}
         >
           {!isSelected && (
             <div className="p-4">
               <div className="flex items-center space-x-4">
                 <Image
-                  src={image || "/placeholder.png"}
+                  src={image || "/placeholder.svg?height=100&width=100"}
                   width={100}
                   height={100}
                   alt={`${name} project`}
@@ -77,17 +79,15 @@ export const ProjectInformation = ({
               exit={{ opacity: 0 }}
               className="flex flex-col 2xl:max-h-[500px] 2xl:flex-row"
             >
-              <div className="relative hidden md:w-1/2">
-                <div className="relative 2xl:h-full">
-                  <Image
-                    src={image || "/placeholder.png"}
-                    fill
-                    alt={`${name} project`}
-                    className="bg-foreground object-cover"
-                  />
-                </div>
+              <div className="relative w-full h-auto 2xl:w-1/2 max-2xl:hidden">
+                <Image
+                  src={image || "/placeholder.svg?height=500&width=500"}
+                  fill
+                  alt={`${name} project`}
+                  className="bg-foreground object-cover"
+                />
               </div>
-              <div className="flex h-full flex-col p-6 md:w-1/2">
+              <div className="flex h-full flex-col p-6 2xl:w-1/2">
                 <div className="flex-grow overflow-y-auto">
                   <div className="mb-6">
                     <h2 className="mb-4 text-2xl font-bold">{name}</h2>
@@ -152,3 +152,4 @@ export const ProjectInformation = ({
 };
 
 export default ProjectInformation;
+

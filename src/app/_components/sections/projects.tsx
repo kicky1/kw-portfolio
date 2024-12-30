@@ -1,13 +1,13 @@
 "use client";
 
-import { LiquidCard } from "./liquid-card";
+import { LiquidCard } from "../liquid-card";
 import { motion } from "framer-motion";
 import { linearAnimation } from "@/lib/animations";
 import { PROJECT_DATA } from "@/lib/constants";
-import { ProjectInformation } from "./project-information";
+import { ProjectInformation } from "../project-information";
 import { useState } from "react";
 
-export function Projects() {
+export const Projects = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   return (
     <LiquidCard title="Projects">
@@ -17,7 +17,7 @@ export function Projects() {
             custom={10}
             variants={linearAnimation}
             key={project.name}
-            className="px-6"
+            className={`px-6 ${selectedId === index ? '2xl:fixed inset-0 z-50 p-4 2xl:p-0' : ''}`}
           >
             <ProjectInformation
               name={project.name}
@@ -36,3 +36,4 @@ export function Projects() {
     </LiquidCard>
   );
 }
+

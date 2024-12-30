@@ -6,17 +6,17 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { type Photo } from "@/lib/types";
 import { GALLERY_IMAGES } from "@/lib/constants";
-import { PhotoCard } from "./photo-card";
 import { linearAnimation } from "@/lib/animations";
+import { PhotoCard } from "../photo-card";
 
-function getInitialImages(): Photo[] {
+const getInitialImages = (): Photo[] => {
   return GALLERY_IMAGES.map((img, i) => ({
     ...img,
     rotation: i === 0 ? 0 : Math.random() * 24 - 6,
   }));
 }
 
-export function Gallery() {
+export const Gallery = () => {
   const [images, setImages] = useState<Photo[]>(getInitialImages);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -75,7 +75,7 @@ export function Gallery() {
             variants={linearAnimation}
             className="relative mx-8 flex-1"
           >
-            <div className="perspective-300 relative flex min-h-[60vh] w-full items-center justify-center">
+            <div className="perspective-300 relative flex min-h-[60vh] w-full items-center justify-center 2xl:mt-10">
               <AnimatePresence mode="popLayout">
                 {images.map((image, index) => (
                   <PhotoCard

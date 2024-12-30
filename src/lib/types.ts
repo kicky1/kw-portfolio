@@ -1,4 +1,4 @@
-export interface Photo {
+export type Photo = {
   id: number;
   src: string;
   alt: string;

@@ -1,10 +1,10 @@
-import { JobInformation } from "./job-information";
+import { JobInformation } from "../job-information";
 import { motion } from "framer-motion";
 import { linearAnimation } from "@/lib/animations";
 import { useState } from "react";
 import { EXPERIENCE_DATA } from "@/lib/constants";
 
-export function ExperienceTimeline() {
+export const  ExperienceTimeline = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   return (
     <div className="space-y-4 2xl:bg-muted">

@@ -1,13 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
-export function LiquidCard({
-  title,
-  children,
-}: {
+type Props = {
   title: string;
   children: React.ReactNode;
-}) {
+}
+
+export const LiquidCard = ({
+  title,
+  children,
+}: Props) => {
   return (
     <div className="relative">
       <div className="flex">

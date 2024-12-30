@@ -3,7 +3,7 @@ import { linearAnimation } from "@/lib/animations";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export function AboutMe() {
+export const AboutMe = () => {
   return (
     <Card className="bg-muted">
       <CardContent className="pt-6">
