@@ -34,7 +34,7 @@ export const ProjectInformation = ({
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsLargeScreen(window.matchMedia("(min-width: 1536px)").matches);
+      setIsLargeScreen(window.matchMedia("(min-width: 672px)").matches);
     };
     
     checkScreenSize();

@@ -236,5 +236,5 @@ export const SKILLS_DATA = [
 export const ABOUT_DATA = {
   name: "Krzysztof Wicki",
   title: "Software Developer",
-  description: "Web developer with 7+ years of experience building innovative solutions and optimizing digital products."
+  description: "Software developer with over 7 years of experience building innovative solutions and optimizing digital products."
 }
