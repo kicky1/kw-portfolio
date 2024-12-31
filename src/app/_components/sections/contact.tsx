@@ -4,7 +4,7 @@ import { CONTACT_DATA } from "@/lib/constants";
 import { motion } from "framer-motion";
 
 type Props = {
-  isMobile: boolean
+  isMobile?: boolean
 }
 
 export const Contact = ({isMobile}: Props) => {
