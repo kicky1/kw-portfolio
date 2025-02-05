@@ -102,7 +102,7 @@ export const PROJECT_DATA = [
   },
   {
     name: "Animated",
-    web: "https://interviewtasks.vercel.app/",
+    web: "https://animated.extend-ui.com/",
     image: "/animated.png",
     badge: [
       { name: "Next.js 15" },
