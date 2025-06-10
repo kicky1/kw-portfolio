@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { LogoReact } from "@styled-icons/ionicons-solid/LogoReact";
 import { Vuejs } from "@styled-icons/boxicons-logos/Vuejs";
 import { Python } from "@styled-icons/boxicons-logos/Python";
@@ -8,25 +8,25 @@ import { Hive } from "@styled-icons/fa-brands/Hive";
 import { Adobephotoshop } from "@styled-icons/simple-icons/Adobephotoshop";
 import { Cisco } from "@styled-icons/simple-icons/Cisco";
 import { Redux } from "@styled-icons/boxicons-logos/Redux";
-import { Aws } from "@styled-icons/boxicons-logos/Aws";
+import { SiCypress, SiJest, SiMantine, SiNestjs, SiRadixui, SiShadcnui, SiStorybook, SiTestinglibrary } from "react-icons/si";
 import {
   Css3,
   Javascript,
   Html5,
   Typescript,
   Figma,
-  Flask,
   Docker,
   Sass,
   Markdown,
   Nextdotjs,
-  Nuxtdotjs,
   Supabase,
   Firebase,
   Tailwindcss,
   Mui,
   Graphql,
 } from "@styled-icons/simple-icons";
+
+import ZustandLogo from "@/public/zustand.png";
 
 
 export const GALLERY_IMAGES = [
@@ -38,16 +38,6 @@ export const GALLERY_IMAGES = [
 ] as const;
 
 export const EXPERIENCE_DATA = [
-  // {
-  //   title: "Co-Founder",
-  //   logo: "/extendui.png",
-  //   company: "Extend UI",
-  //   period: "2024 - Present",
-  //   description:
-  //     "Co-founded ExtendUI, a comprehensive library of user interface components designed to accelerate web development and enhance user experiences.",
-  //   fullDescription: "As the co-founder of ExtendUI, I spearheaded the development of a comprehensive library of reusable user interface components aimed at streamlining web application development. Built on top of the shadcn/ui framework, ExtendUI offers a diverse range of pre-built, customizable components—including buttons, inputs, selects, commands, and date pickers—designed to enhance performance and facilitate seamless integration into React and Next.js projects. Our focus on performance optimization and ease of integration has enabled developers to accelerate their workflows and deliver high-quality user experiences more efficiently.",
-  //   custom: 0,
-  // },
   {
     title: "Mid Software Developer",
     logo: "/sevenet.png",
@@ -203,33 +193,38 @@ export const CONTACT_DATA = [
 
 
 export const SKILLS_DATA = [
-  { name: "HTML", icon: <Html5 />, color: "#e34c26" },
-  { name: "JavaScript", icon: <Javascript />, color: "#f0db4f" },
-  { name: "TypeScript", icon: <Typescript />, color: "#007acc" },
   { name: "React.js", icon: <LogoReact />, color: "#61DBFB" },
   { name: "Next.js", icon: <Nextdotjs />, color: "#ffffff" },
   { name: "Vue.js", icon: <Vuejs />, color: "#41B883" },
-  { name: "Nuxt.js", icon: <Nuxtdotjs />, color: "#41b883" },
-  { name: "GraphQL", icon: <Graphql />, color: "#B82357" },
-  { name: "Python", icon: <Python />, color: "#FFE873" },
-  { name: "Flask", icon: <Flask />, color: "#ffffff" },
-  { name: "Nodejs", icon: <Nodejs />, color: "#68A063" },
-  { name: "Supabase", icon: <Supabase />, color: "#4DB33D" },
-  { name: "Firebase", icon: <Firebase />, color: "#f0db4f" },
-  { name: "AWS", icon: <Aws />, color: "#FF9900" },
-  { name: "Docker", icon: <Docker />, color: "#0db7ed" },
-  { name: "Sass", icon: <Sass />, color: "#B82357" },
-  { name: "GIT", icon: <Github />, color: "#ffffff" },
+  { name: "JavaScript", icon: <Javascript />, color: "#f0db4f" },
+  { name: "TypeScript", icon: <Typescript />, color: "#007acc" },
+  { name: "HTML", icon: <Html5 />, color: "#e34c26" },
   { name: "CSS", icon: <Css3 />, color: "#2965f1" },
+  { name: "Sass", icon: <Sass />, color: "#B82357" },
   { name: "TailwindCss", icon: <Tailwindcss />, color: "#4FCCFE" },
   { name: "MUI", icon: <Mui />, color: "#4FCCFE" },
+  { name: "Radix", icon: <SiRadixui />, color: "#FFFFFF" },
+  { name: "Shadcn", icon: <SiShadcnui />, color: "#FFFFFF" },
+  { name: "Storybook", icon: <SiStorybook />, color: "#FF4785" },
+  { name: "Mantine", icon: <SiMantine />, color: "#4FCCFE" },
+  { name: "Cypress", icon: <SiCypress />, color: "#4B7B5B" },
+  { name: "Jest", icon: <SiJest />, color: "#c21325" },
+  { name: "Testing Library", icon: <SiTestinglibrary />, color: "#dd302e" },
+  { name: "Node.js", icon: <Nodejs />, color: "#68A063" },
+  { name: "Nest.js", icon: <SiNestjs />, color: "#FF4785" },
+  { name: "GraphQL", icon: <Graphql />, color: "#B82357" },
+  { name: "Python", icon: <Python />, color: "#FFE873" },
+  { name: "Supabase", icon: <Supabase />, color: "#4DB33D" },
+  { name: "Firebase", icon: <Firebase />, color: "#f0db4f" },
+  { name: "Docker", icon: <Docker />, color: "#0db7ed" },
+  { name: "GIT", icon: <Github />, color: "#ffffff" },
   { name: "Markdown", icon: <Markdown />, color: "#ffffff" },
   { name: "Photoshop", icon: <Adobephotoshop />, color: "#4FCCFE" },
   { name: "Figma", icon: <Figma />, color: "#A259FF" },
   { name: "AdobeXD", icon: <Adobexd />, color: "#B82357" },
   { name: "Cisco", icon: <Cisco />, color: "#049fd9" },
   { name: "Hive", icon: <Hive />, color: "#B82357" },
-  { name: "Redux", icon: <Redux />, color: "#764abc" },
+  { name: "Redux", icon: <Redux />, color: "#764abc" }
 ];
 
 export const ABOUT_DATA = {

@@ -6,7 +6,7 @@ export const ResumeLink = () => {
         <div className="flex w-40 bg-muted">
           <div className="flex max-w-40 flex-1 items-center justify-center rounded-tl-3xl bg-background p-2">
             <a
-              href="https://drive.google.com/file/d/1KajoehAgLsPeoszhTodtfYL1e-R-LzcG/view?usp=sharing"
+              href="https://drive.google.com/file/d/1fxRRycoylGbivwan87uc0_DQxF3i3G45/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group font-medium text-muted-foreground text-zinc-100 transition-colors hover:text-[#40ce9f]"
